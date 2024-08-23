@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.night {
+    height: 50%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.394), rgb(38, 149, 186)), url(./images/night_sky.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.water {
+    height: 50%;
+    width: 100%;
+    background-image: url(./images/sea.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    height: 100px;
+    width: 10%;
+    background-image: url(./images/sun.png);
+    background-size: 100% 100%;
+    left: -180px;
+    animation: sun 8s linear;
+}
+
+@keyframes sun {
+    0% {
+        left: -180px;
+    }
+    50% {
+        left: 80px;
+    }
+    80% {
+        left: 80px;
+    }
+    100% {
+        left: -180px;
+    }
+}
+
+.clouds {
+    position: relative;
+    height: 150px;
+    width: 50%;
+    top: 80px;
+    left: -700px;
+    animation-name: clouds;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+}
+
+@keyframes clouds {
+    0% {
+        left: -700px;
+    }
+    40% {
+        left: 150px;
+    }
+    60% {
+        left: 150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.cloud {
+    height: 100%;
+    width: 20%;
+    float: left;
+    margin-left: 30px;
+    background-image: url(./images/cloud.png);
+    background-size: 100% 100%;
+}
+
+.cloud1 {
+    height: 50%;
+    width: 20%;
+    float: left;
+    margin-left: 30px;
+    background-image: url(./images/cloud2.png);
+    background-size: 100% 180%;
+}
+
+.birds {
+    position: relative;
+    height: 180px;
+    width: 40%;
+    overflow-x: hidden;
+    float: left;
+    margin: 20px;
+    left: -1150px;
+    top: -70px;
+    background-image: url(./images/birds.gif);
+    background-size: 100% 100%;
+    animation-name: birds;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 22s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes birds {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.b1 {
+    position: relative;
+    top: -200px;
+}
+
+.rain {
+    position: relative;
+    height: 400px;
+    width: 45%;
+    margin-left: 160px;
+    background-image: url(./images/rain.png);
+    background-size: 100% 100%;
+    color: darkgrey;
+    animation-name: rain;
+    opacity: 0;
+    animation-duration: 4s;
+    animation-delay: 15s;
+}
+
+@keyframes rain {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.boat {
+    position: absolute;
+    height: 150px;
+    width: 30%;
+    left: 300px;
+    background-image: url(./images/boat.png);
+    background-size: 100% 100%;
+    animation-name: boat;
+    animation-iteration-count: infinite;
+    animation-duration: 11s;
+    animation-timing-function: linear;
+    overflow: hidden;
+}
+
+@keyframes boat {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.fish {
+    position: relative;
+    height: 70px;
+    width: 10%;
+    float: left;
+    margin-top: 200px;
+    margin-left: 200px;
+    background-image: url(./images/fish.png);
+    background-size: 100% 100%;
+    opacity: 0.6;
+    animation-name: fish;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fish {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.n {
+    top: -80px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .sun {
+        height: 80px;
+        width: 15%;
+    }
+
+    .clouds {
+        height: 100px;
+        top: 60px;
+    }
+
+    .birds {
+        height: 120px;
+        width: 30%;
+        top: -50px;
+    }
+
+    .rain {
+        height: 300px;
+        width: 40%;
+        margin-left: 120px;
+    }
+
+    .boat {
+        height: 120px;
+        width: 40%;
+        left: 200px;
+    }
+
+    .fish {
+        height: 60px;
+        width: 15%;
+        margin-top: 150px;
+        margin-left: 100px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .sun {
+        height: 60px;
+        width: 20%;
+    }
+
+    .clouds {
+        height: 80px;
+        top: 40px;
+    }
+
+    .birds {
+        height: 100px;
+        width: 50%;
+        top: -30px;
+    }
+
+    .rain {
+        height: 200px;
+        width: 50%;
+        margin-left: 80px;
+    }
+
+    .boat {
+        height: 100px;
+        width: 60%;
+        left: 100px;
+    }
+
+    .fish {
+        height: 50px;
+        width: 20%;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+}
